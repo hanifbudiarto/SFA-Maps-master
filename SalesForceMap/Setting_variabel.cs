@@ -8,7 +8,7 @@ namespace SalesForceMap
     class Setting_variabel
     {
         public static string settingPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        public static string NAMA = "Ahmad Reza Musthafa";
+        public static string NAMA = "Muhammad Hanif Budiarto";
         public static bool IS_VISIBLE_CUST_MARKER = true;
         public static bool IS_VISIBLE_SALES_MARKER = true;
 
