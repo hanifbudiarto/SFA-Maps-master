@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesForceMap", "SalesForceMap\SalesForceMap.csproj", "{897D4731-F4CA-40FD-BE60-CB9160DA4839}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SFATrackingSetup", "SFATrackingSetup\SFATrackingSetup.vdproj", "{E60E9D31-5057-49AD-88A7-DF22AB080122}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{897D4731-F4CA-40FD-BE60-CB9160DA4839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{897D4731-F4CA-40FD-BE60-CB9160DA4839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{897D4731-F4CA-40FD-BE60-CB9160DA4839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{897D4731-F4CA-40FD-BE60-CB9160DA4839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E60E9D31-5057-49AD-88A7-DF22AB080122}.Debug|Any CPU.ActiveCfg = Debug
+		{E60E9D31-5057-49AD-88A7-DF22AB080122}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

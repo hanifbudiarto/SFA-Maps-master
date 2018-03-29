@@ -1,0 +1,151 @@
+﻿<Window x:Class="SalesForceMap.Window_DateSelect"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalesForceMap"
+        mc:Ignorable="d"
+        Title="Date Selector" Height="280" Width="360" AllowsTransparency="True" ResizeMode="NoResize"  WindowStyle="None">
+    <Window.Background>
+        <SolidColorBrush Opacity="0.0" Color="White"/>
+    </Window.Background>
+    <Window.Resources>
+
+
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#FF1479BF"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="0,0,0,3" BorderBrush="#FF0080D8"  CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF0080D8"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+        <Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#FFF9F9F9"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="3,3,3,3" BorderBrush="#FF7EBAE4"  CornerRadius="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFEAEFF3"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+        <Style x:Key="ButtonStyle3" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#FF3092E4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="0,0,0,3" BorderBrush="#FF0080D8"  CornerRadius="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF0080D8"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="ButtonStyle4" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#887D8891"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderThickness="0,0,0,3" BorderBrush="#8871787C"  CornerRadius="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#886E6E6E"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+        <!--<Style TargetType="{x:Type DatePickerTextBox}">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <TextBox x:Name="PART_TextBox"
+     Text="{Binding Path=SelectedDate, StringFormat='yyyy-MM-dd', 
+     RelativeSource={RelativeSource AncestorType={x:Type DatePicker}}}" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+        
+
+    </Window.Resources>
+
+    <Grid>
+
+        <Border 
+					   
+					    Margin="35"
+					    BorderBrush="#FF3B5998"
+					    BorderThickness="0"
+					    CornerRadius="5">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="40"
+							    Opacity=".3"
+							    ShadowDepth="15" />
+            </Border.Effect>
+            <Border x:Name="ReceiverColor"
+						    BorderBrush="#FFffffff"
+						    BorderThickness="0"
+						    CornerRadius="5">
+                <Grid>
+                    <Border x:Name="Mask"
+								Background="White"
+								BorderBrush="#FF3B5998"
+								BorderThickness="0"
+								CornerRadius="5"/>
+
+                    <StackPanel>
+                        <StackPanel.OpacityMask>
+                            <VisualBrush Visual="{Binding ElementName=Mask}" />
+                        </StackPanel.OpacityMask>
+
+                    </StackPanel>
+
+                </Grid>
+            </Border>
+        </Border>
+
+        <DatePicker HorizontalAlignment = "Center"  Margin="10,70,10,0"
+         VerticalAlignment = "Top" SelectedDateChanged = "DatePicker_SelectedDateChanged" Width="220" BorderBrush="#FFD4D4D4" BorderThickness="0,0,0,2" Height="32" FontSize="16"
+                    />
+
+        <StackPanel Margin="10,0,10,60" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Button x:Name="btn_cancel" Content="Cancel" Width="90" Height="30" Style="{StaticResource ButtonStyle4}" Foreground="#ffffff" Margin="10,10,0,10" VerticalAlignment="Bottom" Click="btn_cancel_Click"></Button>
+            <Button x:Name="btn_ok" Content="OK" Width="90" Height="30" Style="{StaticResource ButtonStyle3}" Foreground="#ffffff" Margin="10,10,10,10"  VerticalAlignment="Bottom" Click="btn_ok_Click" FontWeight="Bold"></Button>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
